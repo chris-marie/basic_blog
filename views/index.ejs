@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html ng-app="basicblog">
+<head lang="en">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/stylesheets/base.css"/>
+  <script src="/angular/angular.js"></script>
+  <script src="/angular-resource/angular-resource.js"></script>
+  <script src="/angular-route/angular-route.js"></script>
+  <script src="/javascripts/controllers.js"></script>
+  <script src="/javascripts/services.js"></script>
+</head>
+<body>
+<div ng-view></div>
+<script>
+  angular.module('basicblog');
+</script>
+
+</body>
 </html>
