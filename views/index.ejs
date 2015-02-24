@@ -12,7 +12,20 @@
 <body>
 <div ng-view></div>
 <script>
-  angular.module('basicblog');
+  angular.module('basicblog', ['basicblog.controllers', 'ngRoute']).config(function ($routeProvider) {
+    $routeProvider.when('/posts/create', {
+      templateUrl: '/partials/createpost.html',
+      controller: 'CreatePostController as cp'
+    }).when('posts/allposts', {
+      templateUrl: '/partials/allblogs.html',
+      controller: 'BlogListController as bl'
+    }).when('posts/lists/:id', {
+      templateUrl: '/partials/listpost.html',
+      controller: 'ListPostController as lp'
+    }).otherwise({
+      redirectTo: 'posts/create'
+    });
+  });
 </script>
 
 </body>
