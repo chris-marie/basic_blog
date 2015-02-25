@@ -1,0 +1,9 @@
+<div>
+    <div><a href="#/posts/allposts">All Posts</a></div>
+    <input type="text" ng-model="cp.blog.title"/>
+    <div>
+        <textarea cols="90" rows="10" ng-model="cp.blog.content"></textarea>
+    </div>
+    <button ng-click="cp.create()">Create Post</button>
+    <div class="message">{{cp.message}}</div>
+</div>
